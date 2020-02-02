@@ -11,6 +11,6 @@ Canela🐾 has too many pretty colored bandanas🧣to pick from.
 Let's help Canela🐾 create and manage a nonrelational Amazon DynamoDB database of her favorite bandanas!
 
 
-### We'll be using this code in AWS Cloud9 IDE, so we'll need to clone this repo in the Cloud9 CLI
+## We'll be using this code in AWS Cloud9 IDE, so we'll need to clone this repo in the Cloud9 CLI
 
 git clone https://github.com/alequetzalli/dynamodb-database-canela-bandanas.git
