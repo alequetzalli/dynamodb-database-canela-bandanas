@@ -24,7 +24,7 @@ while True:
 resp = table.query(
     # Add the name of the index you want to use in your query.
     IndexName="CategoryIndex",
-    KeyConditionExpression=Key('Shade').eq('pastel'),
+    KeyConditionExpression=Key('Color').eq('soft pink'),
 )
 
 print("The query returned the following items:")
