@@ -10,22 +10,22 @@ try:
         # Declare your Primary Key in the KeySchema argument
         KeySchema=[
             {
-                "AttributeName": "color",
+                "AttributeName": "Material",
                 "KeyType": "HASH"
             },
             {
-                "AttributeName": "pastels",
+                "AttributeName": "Shade",
                 "KeyType": "RANGE"
             }
         ],
         # Any attributes used in KeySchema or Indexes must be declared in AttributeDefinitions
         AttributeDefinitions=[
             {
-                "AttributeName": "color",
+                "AttributeName": "Material",
                 "AttributeType": "S"
             },
             {
-                "AttributeName": "pastels",
+                "AttributeName": "Shade",
                 "AttributeType": "S"
             }
         ],
