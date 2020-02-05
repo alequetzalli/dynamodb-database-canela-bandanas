@@ -10,9 +10,13 @@ try:
         # Any attributes used in our new global secondary index must be declared in AttributeDefinitions
         AttributeDefinitions=[
             {
-                "AttributeName": "Category",
+                "AttributeName": "Color",
                 "AttributeType": "S"
             },
+            {
+                "AttributeName": "Material",
+                "AttributeType": "S"
+            }
         ],
         # This is where we add, update, or delete any global secondary indexes on our table.
         GlobalSecondaryIndexUpdates=[
@@ -24,8 +28,12 @@ try:
                     # For a global secondary index, you can do a simple or composite key schema.
                     "KeySchema": [
                         {
-                            "AttributeName": "Category",
+                            "AttributeName": "Color",
                             "KeyType": "HASH"
+                        },
+                        {
+                            "AttributeName": "Material",
+                            "KeyType": "RANGE"
                         }
                     ],
                     # You can choose to copy only specific attributes from the original item into the index.
