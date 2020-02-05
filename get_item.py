@@ -7,6 +7,6 @@ dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
 table = dynamodb.Table('Bandanas')
 
 # When making a GetItem call, we specify the Primary Key attributes defined on our table for the desired item.
-resp = table.get_item(Key={"color": "lilac", "pastels": "yes"})
+resp = table.get_item(Key={"Material": "cotton", "Shade": "pastel::baby blue"})
 
 print(resp['Item'])
