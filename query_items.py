@@ -10,7 +10,7 @@ table = dynamodb.Table('Bandanas')
 # When making a Query API call, we use the KeyConditionExpression parameter to specify the hash key on which we want to query.
 # We're using the Key object from the Boto3 library to specify that we want the attribute name ("Author")
 # to equal "John Grisham" by using the ".eq()" method.
-resp = table.query(KeyConditionExpression=Key('Color').eq('lilac'))
+resp = table.query(KeyConditionExpression=Key('Material').eq('cotton') & Key('Shade').begins_with('pastel::'))
 
 print("The query returned the following items:")
 for item in resp['Items']:
